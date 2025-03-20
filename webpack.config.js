@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
     },
     devServer: {
         static: {
@@ -19,9 +19,7 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                // { from: "index.html", to: "" },
                 { from: "style.css", to: "" },
-                { from: "node_modules/boxicons/dist/boxicons.js", to: "" },
             ],
         }),
         new HtmlWebpackPlugin({
